@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+  --primary-neon-green-hlsa: 150, 100%, 66%;
+  --neutral-grayish-blue: hsl(217, 19%, 38%);
+  --neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --neutral-dark-blue: hsl(218, 23%, 16%);
+  --font-size-quote: 28px;
+  --font-family: 'Manrope', sans-serif;
+}
+
+*{ 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+  font-family: var(--font-family);
+} 
+
+body{ 
+  height: 100vh; 
+  width: 100vw; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: var(--neutral-dark-blue);
+} 
+
+.card{
+  min-height: 350px;
+  min-width: 300px;
+  max-width: 550px;
+  background-color: var(--neutral-dark-grayish-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 15px;
+  padding: 3rem 3rem 4.5rem 3rem;
+  gap: 1.5rem;
+}
+
+.card .advice-id{
+  color: var(--primary-neon-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  user-select: none;
+}
+.card .advice-text{
+  color: var(--primary-light-cyan);
+  font-size: var(--font-size-quote);
+  text-align: center;
+}
+
+.line{
+  height: 2px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.line .line-desktop{
+  position: absolute;
+  width: 100%;
+}
+.line .line-mobile{
+  display: none;
+}
+
+.dice{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--primary-neon-green);
+  bottom: -105px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.dice:hover{
+  box-shadow: 0px 0px 20px hsla( var(--primary-neon-green-hlsa),.8);
+}
+
+@media(max-width:500px){
+  .card{
+    width: 100%;
+    margin:  0 1rem;
+  }
+}
